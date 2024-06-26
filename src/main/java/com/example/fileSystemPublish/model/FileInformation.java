@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -18,11 +19,13 @@ import lombok.NoArgsConstructor;
 @Builder
 public class FileInformation {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String sender;
     private String receiver;
     private String message;
+    private LocalDateTime timeStamp;
+
 
 }

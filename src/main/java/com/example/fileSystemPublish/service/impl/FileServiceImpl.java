@@ -31,7 +31,7 @@ public class FileServiceImpl implements FileService {
         fileInformation.setReceiver(fileInformationDto.getReceiver());
         fileInformation.setSender(fileInformationDto.getSender());
         fileInformation.setMessage(fileInformationDto.getMessage());
-        //fileInformation.setTimeStamp(LocalDateTime.now());
+        fileInformation.setTimeStamp(LocalDateTime.now());
 
         return fileInformation;
 
