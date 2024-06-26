@@ -1,15 +1,16 @@
-package com.example.fileSystemPublish.config;
+package com.example.fileSystemPublish.kafkaConfig;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
-
 @Configuration
-public class KafkaTopicConfiguration {
-
+public class KafkaConfig {
     @Bean
-    public NewTopic fileSystemTopic(){
-        return TopicBuilder.name("fileSystem").build();
+    public NewTopic topic(){
+        return TopicBuilder
+                .name(AppConstant.FILE_SYSTEM)
+                .build();
+
     }
 }

@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+
 
 @Entity
 @Data
@@ -23,7 +23,6 @@ public class FileInformation {
 
     private String sender;
     private String receiver;
-    private LocalDateTime timeStamp;
     private String message;
 
 }
